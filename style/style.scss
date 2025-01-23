@@ -1,0 +1,59 @@
+@forward "./base/reset";
+@use './utils/index' as variables;
+
+a {
+    color: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@mixin flex-items($y-align, $x-align, $direction){
+    display: flex;
+    align-items: $y-align;
+    justify-content: $x-align;
+    flex-direction: $direction;
+}
+
+header nav {
+    @include flex-items(center, space-between, row);
+    background-color: variables.$primary-color;
+    color: white;
+    padding: 15px 10px;
+
+    ul {
+        @include flex-items(center, space-between, column);
+        gap: 15px;
+
+        a {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            transition: .4s;
+            background-color: variables.$secondary-color;
+        }
+    }
+}
+@media screen and (min-width: 800px) {
+    header nav {
+        @include flex-items(center, space-between, row);
+        background-color: variables.$primary-color;
+        color: white;
+        padding: 15px 10px;
+    
+        ul {
+            @include flex-items(center, space-between, row);
+            gap: 15px;
+    
+            a {
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+        }
+    }
+}
