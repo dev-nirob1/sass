@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$main-color: #c8deff;
+
+body {
+    background: linear-gradient(#a5aae9cc, #8c9af6);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: $main-color;
+    max-width: 300px;
+    padding: 1.5rem;
+    line-height: 24px;
+    margin: 4rem;
+    position: relative;
+}
+
+.img {
+    height: 5rem;
+    width: 5rem;
+    border: 2px solid rgb(239, 239, 239);
+    border-radius: 100%;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    background-color: aquamarine;
+}
